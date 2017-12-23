@@ -1,0 +1,23 @@
+body, html {
+  margin: 0;
+}
+
+.chart {
+  width: 100%;
+  height: 100vh;
+}
+
+#choice p {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+#choice {
+  position: fixed;
+  z-index: 2137;
+  font-size: 0.7em;
+  background: #FFFFFF;
+  border: 1px solid #323232;
+  padding: 0 2px 2px 0;
+}
