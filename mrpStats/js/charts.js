@@ -1,18 +1,12 @@
 var data;
 var ajax = new XMLHttpRequest();
 ajax.open('GET', 'activity.json');
-console.log('preajax');
 ajax.addEventListener('readystatechange', function(event) {
   if(this.readyState == 4 && this.status == 200) {
     data = JSON.parse(this.responseText);
-    console.log('postajax');
     var _group, _type;
-    console.log('preLoad');
-      console.log('DOMContentLoaded');
       var choice = $('#choice');
       var button = $('#btn');
-      console.log(choice);
-      console.log(button);
       var _group, _type;
       button.addEventListener('click', function(event) {
         event.preventDefault();
@@ -43,7 +37,6 @@ ajax.addEventListener('readystatechange', function(event) {
               }
               config[group][type].push(series);
             }
-            console.log(config[group][type]);
           }
         }
         createChart(_group, _type,  config[_group][_type]);
@@ -56,7 +49,6 @@ ajax.send();
 
 
 function createChart(group, type, series) {
-  console.log('chart');
   series.forEach(function(name){
     name.data.sort(function (a,b) {
       if(a.x < b.x) {
