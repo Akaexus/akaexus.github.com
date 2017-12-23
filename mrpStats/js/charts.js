@@ -11,6 +11,8 @@ ajax.addEventListener('readystatechange', function(event) {
       console.log('DOMContentLoaded');
       var choice = $('#choice');
       var button = $('#btn');
+      console.log(choice);
+      console.log(button);
       var _group, _type;
       button.addEventListener('click', function(event) {
         event.preventDefault();
@@ -108,8 +110,8 @@ function createChart(group, type, series) {
 }
 
 
-function $(e, _=document) {
-  var x = _.querySelectorAll(e);
+function $(e) {
+  var x = document.querySelectorAll(e);
   if(x.length==1) {
     return x[0];
   }
