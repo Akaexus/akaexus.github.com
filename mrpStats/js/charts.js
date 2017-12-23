@@ -7,7 +7,7 @@ ajax.addEventListener('readystatechange', function(event) {
     var _group, _type;
     document.addEventListener('DOMContentLoaded', function() {
       var choice = $('#choice');
-      var button = $('#button', choice);
+      var button = $('#btn');
       var _group, _type;
       button.addEventListener('click', function(event) {
         event.preventDefault();
