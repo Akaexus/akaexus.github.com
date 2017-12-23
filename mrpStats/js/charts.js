@@ -1,16 +1,20 @@
 var data;
 var ajax = new XMLHttpRequest();
 ajax.open('GET', 'activity.json');
+console.log('preajax');
 ajax.addEventListener('readystatechange', function(event) {
   if(this.readyState == 4 && this.status == 200) {
+    console.log('postajax');
     data = JSON.parse(this.responseText);
     var _group, _type;
     document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOMContentLoaded');
       var choice = $('#choice');
       var button = $('#btn');
       var _group, _type;
       button.addEventListener('click', function(event) {
         event.preventDefault();
+        console.log('DOMContentLoaded');
         Array.from(choice.querySelectorAll('input[name=group]'), function(item) {
           if(item.checked) {
             _group = item.value;
