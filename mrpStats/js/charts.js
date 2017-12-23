@@ -29,7 +29,7 @@ ajax.addEventListener('readystatechange', function(event) {
             for(var nick in data[group]) {
               var series = {
                 name: nick,
-                data: new Array()
+                data: []
               };
               for(var date in data[group][nick]) {
                 var ds = date.split('-');
