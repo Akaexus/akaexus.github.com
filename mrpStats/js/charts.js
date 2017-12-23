@@ -4,10 +4,10 @@ ajax.open('GET', 'activity.json');
 console.log('preajax');
 ajax.addEventListener('readystatechange', function(event) {
   if(this.readyState == 4 && this.status == 200) {
-    console.log('postajax');
     data = JSON.parse(this.responseText);
+    console.log('postajax');
     var _group, _type;
-    document.addEventListener('load', function() {
+    console.log('preLoad');
       console.log('DOMContentLoaded');
       var choice = $('#choice');
       var button = $('#btn');
@@ -48,7 +48,6 @@ ajax.addEventListener('readystatechange', function(event) {
         }
         createChart(_group, _type,  config[_group][_type]);
       });
-    });
 
   }
 });
