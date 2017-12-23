@@ -7,7 +7,7 @@ ajax.addEventListener('readystatechange', function(event) {
     console.log('postajax');
     data = JSON.parse(this.responseText);
     var _group, _type;
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('load', function() {
       console.log('DOMContentLoaded');
       var choice = $('#choice');
       var button = $('#btn');
